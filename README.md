@@ -23,8 +23,13 @@ vue3语法糖
 >9. window.$cancelRequest()取消请求，再初始化即还没有axios请求数据前调用会报错。
 
 使用：
+
 1.git clone
+
 2.npm
+
 `npm install -g yo`
+
 `npm install -g generator-vite-vue-app`
+
 `yo vite-vue-app`
