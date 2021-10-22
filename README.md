@@ -1,6 +1,6 @@
 vue3语法糖
 
-基于移动端的配置。
+基于移动端的配置，基于vite+vue3。
 
 [vite官网](https://cn.vitejs.dev/guide/why.html)
 
