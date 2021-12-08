@@ -32,3 +32,5 @@ vue3语法糖
 > - 新增unplugin-auto-import插件自动导入vue3 HOOKS
 > - 新增vite-plugin-style-import用于解决非template组件样式失效问题
 > - 新增vue-global-api解决eslint报错
+
+相关文档：[基于vite搭建一个vue移动端脚手架](https://blog.csdn.net/skyblacktoday/article/details/120886112)
