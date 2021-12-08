@@ -1,12 +1,9 @@
 <template>
   <div>login</div>
-  <Button type="primary" @click="login">登录</Button>
+  <van-button type="primary" @click="login">登录</van-button>
 </template>
 
 <script setup lang="ts">
-import {useRouter} from 'vue-router'
-import {useStore} from 'vuex'
-import {Button} from 'vant'
 import { sessions } from '@/utils/utils'
 let store = useStore()
 let router = useRouter()

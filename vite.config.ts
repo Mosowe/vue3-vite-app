@@ -1,10 +1,66 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import {
+  // ElementPlusResolver,
+  // AntDesignVueResolver,
+  VantResolver,
+  // HeadlessUiResolver,
+  // ElementUiResolver
+} from 'unplugin-vue-components/resolvers'
+import styleImport, {
+  // AndDesignVueResolve,
+  VantResolve,
+  // ElementPlusResolve,
+  // NutuiResolve,
+  // AntdResolve
+} from 'vite-plugin-style-import'
+
 const path = require("path");
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    Components({
+      dirs: ['src/components'],
+      extensions: ['vue'],
+      dts: 'src/components.d.ts',
+      // ui库解析器，也可以自定义，需要安装相关UI库
+      resolvers: [
+        VantResolver(),
+        // ElementPlusResolver(),
+        // AntDesignVueResolver(),
+        // HeadlessUiResolver(),
+        // ElementUiResolver()
+      ],
+    }),
+    AutoImport({
+      imports: ['vue', 'vue-router', 'vuex', 'vue-i18n', '@vueuse/head', '@vueuse/core'],
+      // 可以选择auto-import.d.ts生成的位置，使用ts建议设置为'src/auto-import.d.ts'
+      dts: 'src/auto-import.d.ts'
+    }),
+    styleImport({
+      resolves: [
+        // AndDesignVueResolve(),
+        VantResolve(),
+        // ElementPlusResolve(),
+        // NutuiResolve(),
+        // AntdResolve()
+      ],
+      // 自定义规则
+      // libs: [
+      //   {
+      //     libraryName: 'vant',
+      //     esModule: true,
+      //     resolveStyle: (name) => {
+      //       return `ant-design-vue/es/${name}/style/index`
+      //     }
+      //   }
+      // ]
+    })
+  ],
   server: {
     host: '127.0.0.1',
     port: 5000

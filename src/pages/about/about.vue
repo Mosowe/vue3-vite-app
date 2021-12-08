@@ -1,7 +1,7 @@
 <template>
   <div>about</div>
   <br/>
-  <router-link to="/user?id=123" class="link">user</router-link>
+  <router-link to="/user?id=123" class="link">to user page</router-link>
 </template>
 
 <script setup lang="ts">

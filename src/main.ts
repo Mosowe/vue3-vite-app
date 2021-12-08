@@ -4,6 +4,9 @@ import router from './router/router'
 import store from './store/store';
 
 const app = createApp(App)
+
+// 初始化默认一个window.$cancelRequest()
+window.$cancelRequest = () => { }
 // 时间格式化
 Date.prototype.Format = function (fmt?: string) {
   if (!fmt) { 
