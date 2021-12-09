@@ -21,7 +21,7 @@ vue3语法糖
 > 7. autoprefixer自动补全
 > 8. typescript语法
 > 9. window.$cancelRequest()取消请求
-> 10. `新`template组件字段引入，无需import，不是template组件的需要手动引入，如：Toast
+> 10. `新`template组件自动引入，无需import，不是template组件的需要手动引入，如：Toast
 > 11. `新`自动导入vue3 HOOKS
 
 其他
